@@ -11,23 +11,24 @@
     <nav class="p-6 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
             <li>
-                <a href="" class="p-4">Home</a>
+                <a href={{route('home')}} class="p-4">Home</a>
             </li>
             <li>
-                <a href="" class="p-4">Dashboard</a>
+                <a href={{route('dashboard')}} class="p-4">Dashboard</a>
             </li>
             <li>
-                <a href="" class="p-4">Post</a>
+                <a href={{route('posts')}} class="p-4">Post</a>
             </li>
         </ul>
         <ul class="flex items-center">
             @auth
             <li>
-                <a href="" class="p-4">Mathey Manase</a>
+            <a href="" class="p-4">{{Auth::user()->name}}</a>
             </li>
-            <li>
-                <a href="" class="p-4">Logout</a>
-            </li>
+            <form action={{route('logout')}} action="post">
+                @csrf
+                <button class="p-4">Logout</button>
+            </form>
             @endauth
             @guest
                 <li>

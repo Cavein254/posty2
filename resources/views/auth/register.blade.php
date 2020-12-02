@@ -12,8 +12,8 @@
                     name="name" 
                     id="name" 
                     placeholder="name" 
-                    class="bg-gray-100 
-                    border-2 w-full p-4 rounded-lg" value="" />
+                    class="bg-gray-100
+                    border-2 w-full p-4 rounded-lg" value="{{old('name')}}" />
 
                     @error('name')
                     <div class="text-red-500 mt-2 text-sm">
@@ -29,7 +29,7 @@
                     id="username" 
                     placeholder="username" 
                     class="bg-gray-100 
-                    border-2 w-full p-4 rounded-lg" value="" />
+                    border-2 w-full p-4 rounded-lg" value="{{old('username')}}" />
 
                     @error('username')
                     <div class="text-red-500 mt-2 text-sm">
@@ -45,7 +45,7 @@
                     id="email" 
                     placeholder="email" 
                     class="bg-gray-100 
-                    border-2 w-full p-4 rounded-lg" value="" />
+                    border-2 w-full p-4 rounded-lg" value="{{old('email')}}" />
 
                     @error('email')
                     <div class="text-red-500 mt-2 text-sm">
@@ -77,7 +77,7 @@
                     id="password_confirmation" 
                     placeholder="Confirm Password" 
                     class="bg-gray-100 
-                    border-2 w-full p-4 rounded-lg" value="" />
+                    border-2 w-full p-4 rounded-lg" value="" /> 
                 </div>
                 <div>
                     <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>

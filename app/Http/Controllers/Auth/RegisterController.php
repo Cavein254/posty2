@@ -15,15 +15,15 @@ class RegisterController extends Controller
     }
 
     public function store(Request $request)
+
     {
         $this->validate($request, [
             'name' => 'required | max:50',
             'username' => 'required | max:50',
             'email' => 'required | email',
-            'password' => 'required'
+            'password' => 'required | confirmed',
         ]);
 
-        // dd($request->username);
 
         User::create([
             'name' => $request->name,
@@ -31,5 +31,9 @@ class RegisterController extends Controller
             'username' => $request->username,
             'password' => Hash::make($request->password)
         ]);
+
+        auth()->attempt($request->only('email', 'password'));
+
+        return redirect()->route('dashboard');
     }
 }

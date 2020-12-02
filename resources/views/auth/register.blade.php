@@ -70,10 +70,10 @@
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="password_cofirmation" class="sr-only">Confirm Password</label>
+                    <label for="password_confirmation" class="sr-only">Confirm Password</label>
                     <input 
                     type="password" 
-                    name="password_cofirmation" 
+                    name="password_confirmation" 
                     id="password_confirmation" 
                     placeholder="Confirm Password" 
                     class="bg-gray-100 
